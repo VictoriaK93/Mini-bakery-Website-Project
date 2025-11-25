@@ -1,0 +1,144 @@
+body {
+    font-family: sans-serif;
+    background: #fff8f1;
+    color: #3e2c1c;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+  .logo {
+    width: 300px;
+    margin-top: 5px;
+  }
+  
+  header {
+    padding: 20px;
+    background-color: #ffe5d9;
+  }
+  
+  .gallery img {
+    width: 250px;
+    margin: 10px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  
+  .order-form {
+    background-color: #fff0e1;
+    padding: 30px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  input, textarea {
+    width: 80%;
+    max-width: 400px;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+  }
+  
+  button {
+    background-color: #f67280;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+ 
+ 
+.gallery-section {
+    background: #fff3ea;
+    padding: 30px;
+  }
+  
+  .gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 40px;
+  }
+  
+  .gallery .item {
+    cursor: pointer;
+  }
+  
+  .gallery .item img {
+    width: 220px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.2s;
+  }
+  
+  .gallery .item:hover img {
+    transform: scale(1.05);
+  }
+  
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 99;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    max-width: 500px;
+    width: 90%;
+  }
+  
+  .modal-content img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .modal-content h3 {
+    margin-top: 15px;
+  }
+  
+  .modal-content .close {
+    position: absolute;
+    top: 5px; right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #555;
+  }
+  footer {
+    background-color: #fff0e1;
+    padding: 20px;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 18px;
+  }
+  
+  footer .social-icon {
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+    transition: transform 0.3s;
+  }
+  
+  footer .social-icon:hover {
+    transform: scale(1.1);
+  }
+  
+  

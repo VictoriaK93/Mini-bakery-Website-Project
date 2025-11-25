@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>She Bakes Halifax</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <img src="images/logo.png" alt="Логотип" class="logo">
+    <h1>Homemade Cakes, Cookies and Treats |  Halifax</h1>
+    <p>Sweet treats with the heart of Ukraine💕</p>
+  </header>
+
+  <section class="gallery-section">
+    <h2>🍰 Cakes</h2>
+    <div class="gallery">
+      <div class="item" onclick="showModal('Торт Шоколадный', 'Шоколад, сливки, бисквит', '1200₽', 'images/cake1.jpg')">
+        <img src="images/cake1.jpg" alt="Шоколадный торт">
+      </div>
+      <div class="item" onclick="showModal('Торт Клубничный', 'Клубника, крем, бисквит', '1300₽', 'images/cake2.jpg')">
+        <img src="images/cake2.jpg" alt="Клубничный торт">
+      </div>
+      <div class="item" onclick="showModal('Торт Клубничный', 'Клубника, крем, бисквит', '1300₽', 'images/cake2.jpg')">
+        <img src="images/cake3.jpg" alt="Клубничный торт">
+    </div>
+    <div class="item" onclick="showModal('Торт Клубничный', 'Клубника, крем, бисквит', '1300₽', 'images/cake2.jpg')">
+        <img src="images/cake4.JPG" alt="Клубничный торт">
+    </div>
+
+    <h2>🍪 Cookies & Sweets</h2>
+    <div class="gallery">
+      <div class="item" onclick="showModal('Печенье с орехами', 'Миндаль, масло, сахар', '500₽', 'images/cookie1.jpg')">
+        <img src="images/cookie1.jpg" alt="Печенье с орехами">
+      </div>
+      <div class="item" onclick="showModal('Печенье с орехами', 'Миндаль, масло, сахар', '500₽', 'images/cookie1.jpg')">
+        <img src="images/cookie2.JPG" alt="Печенье с орехами">
+      </div>
+      <div class="item" onclick="showModal('Печенье с орехами', 'Миндаль, масло, сахар', '500₽', 'images/cookie1.jpg')">
+        <img src="images/oreo.PNG" alt="Печенье с орехами">
+    </div>
+    <div class="item" onclick="showModal('Печенье с орехами', 'Миндаль, масло, сахар', '500₽', 'images/cookie1.jpg')">
+        <img src="images/nuts.JPG" alt="Печенье с орехами">
+    </div>
+  </section>
+
+  <section class="order-form">
+    <h2>Make a order</h2>
+    <form action="mail.php" method="POST">
+      <input type="text" name="name" placeholder="Your name" required>
+      <input type="email" name="email" placeholder="Your email" required>
+      <input type="tel" name="phone" placeholder="Phone number">
+      <textarea name="message" placeholder="What you want to order?" required></textarea>
+      <button type="submit">Send order</button>
+    </form>
+  </section>
+
+  <!-- Модальное окно -->
+  <div id="modal" class="modal" onclick="hideModal()">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <span class="close" onclick="hideModal()">&times;</span>
+      <img id="modal-img" src="">
+      <h3 id="modal-title"></h3>
+      <p id="modal-ingredients"></p>
+      <p id="modal-price"></p>
+    </div>
+  </div>
+
+  <script>
+    function showModal(title, ingredients, price, imgSrc) {
+      document.getElementById('modal-title').innerText = title;
+      document.getElementById('modal-ingredients').innerText = 'Ингредиенты: ' + ingredients;
+      document.getElementById('modal-price').innerText = 'Цена: ' + price;
+      document.getElementById('modal-img').src = imgSrc;
+      document.getElementById('modal').style.display = 'flex';
+    }
+
+    function hideModal() {
+      document.getElementById('modal').style.display = 'none';
+    }
+  </script>
+  <footer>
+    <p>We are at Instagram:</p>
+    <a href="https://www.instagram.com/she_bakes_hfx/" target="_blank">
+      <img src="images/instagram_icon.png" alt="Instagram" class="social-icon">
+    </a>
+  </footer>
+  
+</body>
+</html>
+
