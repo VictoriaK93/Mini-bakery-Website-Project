@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $to = "shebakeshfx@gmail.com"; // <-- здесь укажи email директора
+    $to = "shebakeshfx@gmail.com"; 
     $subject = "Новый заказ с сайта пекарни";
 
     $name = htmlspecialchars($_POST['name']);
